@@ -32,6 +32,8 @@ Props|Type|Description
 `when`|`boolean \| undefined`|If `true`, the child component is rendered.
 `children`|`ReactNode`|Rendered when the condition is `true`.
 
+<br />
+
 ## Example
 
 ### `Show`
