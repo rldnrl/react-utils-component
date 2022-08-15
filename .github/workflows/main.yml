@@ -8,7 +8,7 @@ jobs:
     strategy:
       matrix:
         node: ['16.x']
-        os: [ubuntu-latest, windows-latest, macOS-latest]
+        os: [ubuntu-latest]
 
     steps:
       - name: Checkout repo
@@ -30,3 +30,8 @@ jobs:
 
       - name: Build
         run: yarn build
+
+      - name: Publish package to NPM
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
