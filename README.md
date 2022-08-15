@@ -12,7 +12,7 @@ Component for conditional rendering.
 Props|Type|Description
 ---|---|---
 `when`|`boolean`|Conditions to be used for conditional rendering.
-`fallback`|`JSX.Element | undefined`|Render when the condition is `false`.
+`fallback`|`JSX.Element \| undefined`|Render when the condition is `false`.
 `children`|`ReactNode`|Render when the condition is `true`.
 
 ### `Switch-Match`
@@ -21,13 +21,13 @@ This component is useful when there are multiple conditions like `switch-case`.
 #### `SwitchProps`
 Props|Type|Description
 ---|---|---
-`fallback`|`JSX.Element | undefined`|If all the conditions of the Match component, which is a child component, are not met, it is rendered.
+`fallback`|`JSX.Element \| undefined`|If all the conditions of the Match component, which is a child component, are not met, it is rendered.
 `children`|`ReactNode`|Locate Match Components
 
 #### `MatchProps`
 Props|Type|Description
 ---|---|---
-`when`|`boolean | undefined`|If `true`, the child component is rendered.
+`when`|`boolean \| undefined`|If `true`, the child component is rendered.
 `children`|`ReactNode`|Rendered when the condition is `true`.
 
 ## Example
