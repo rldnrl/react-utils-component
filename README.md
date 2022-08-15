@@ -15,6 +15,8 @@ Props|Type|Description
 `fallback`|`JSX.Element \| undefined`|Render when the condition is `false`.
 `children`|`ReactNode`|Render when the condition is `true`.
 
+<br />
+
 ### `Switch-Match`
 This component is useful when there are multiple conditions like `switch-case`.
 
