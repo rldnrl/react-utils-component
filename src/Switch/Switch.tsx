@@ -43,7 +43,7 @@ export default function Switch({ fallback, children }: SwitchProps) {
   );
 
   if (isEveryNull) {
-    return fallback;
+    return <>{fallback}</>;
   }
 
   return <>{matchComponent}</>;
