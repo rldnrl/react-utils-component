@@ -2,6 +2,17 @@
 ## Motivation
 This project is inspired by [solidjs](https://www.solidjs.com/) and [vuejs](https://vuejs.org/).
 
+## Install Package
+
+```bash
+$ npm install react-utils-component
+```
+
+```bash
+$ yarn add react-utils-component
+```
+
+<br />
 
 ## Usage
 
