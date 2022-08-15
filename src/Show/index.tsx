@@ -1,4 +1,4 @@
-import Show from "./Show";
+import Show from './Show';
 
-export type { ShowProps } from './Show'
+export { ShowProps } from './Show';
 export default Show;

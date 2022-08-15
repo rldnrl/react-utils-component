@@ -1,4 +1,4 @@
-import Match from "./Match";
+import Match from './Match';
 
-export type { MatchProps } from './Match'
+export { MatchProps } from './Match';
 export default Match;
