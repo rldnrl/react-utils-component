@@ -43,6 +43,8 @@ const [role, setRole] = useState('user')
 
 ### `Switch-Match`
 ```tsx
+const [role, setRole] = useState('user')
+
 <Switch fallback={<p>This is Default Children</p>}>
   <Match when={role === "user"}>
     <p>User Component</p>
