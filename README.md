@@ -175,7 +175,7 @@ const todos = [
   },
 ];
 
-{/* Only Rendered when `completed=true` */}
+{/* Only render items for which `completed` is `true`. */}
 <List.Filter
   each={todos}
   predicate={todo => todo.completed}
