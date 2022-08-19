@@ -25,8 +25,8 @@ Component for conditional rendering.
 Props|Type|Description
 ---|---|---
 `when`|`boolean`|Conditions to be used for conditional rendering.
-`fallback`|`JSX.Element \| undefined`|Render when the condition is `false`.
-`children`|`ReactNode`|Render when the condition is `true`.
+`fallback`|`JSX.Element \| undefined`|Rendered when the condition is `false`.
+`children`|`ReactNode`|Rendered when the condition is `true`.
 
 <br />
 
