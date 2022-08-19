@@ -67,6 +67,8 @@ Props|Type|Description
 `predicate`|`(item: T) => boolean`|A function that accepts up to one arguments. The filter method calls the predicate function one time for each element in the array.
 `children`|`(item: T, index?: number) => U`|The first argument contains an item of the same type as the single type of `each`. The second argument is `index`. Just return `JSX.Element` you want to iterate over.
 
+<br />
+
 ## Example
 
 ### `Show`
