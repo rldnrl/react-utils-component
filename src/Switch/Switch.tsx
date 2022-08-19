@@ -37,7 +37,12 @@ export default function Switch({ fallback, children }: SwitchProps) {
     [matchComponents]
   );
 
-  if (matchComponent.every(element => element === null)) {
+  const isFilledNull = useMemo(
+    () => matchComponent.every(element => element === null),
+    [matchComponent]
+  );
+
+  if (isFilledNull) {
     return <>{fallback}</>;
   }
 
