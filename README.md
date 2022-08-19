@@ -47,10 +47,10 @@ Props|Type|Description
 
 <br />
 
-### List
+### `List`
 This is a component inspired by methods in `Array` in javascript.
 
-#### List.Map
+#### `List.Map`
 It works the same as an `Array`'s `map`.
 
 Props|Type|Description
@@ -58,7 +58,7 @@ Props|Type|Description
 `each`|`T[]`|The array you want to iterate over.
 `children`|`(item: T, index?: number) => U`|The first argument contains an item of the same type as the single type of `each`. The second argument is `index`. Just return `JSX.Element` you want to iterate over.
 
-#### List.Filter
+#### `List.Filter`
 It works the same as the `Array`'s `filter`.
 
 Props|Type|Description
