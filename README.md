@@ -47,6 +47,26 @@ Props|Type|Description
 
 <br />
 
+### List
+This is a component inspired by methods in `Array` in javascript.
+
+#### List.Map
+It works the same as an `Array`'s `map`.
+
+Props|Type|Description
+---|---|---
+`each`|`T[]`|The array you want to iterate over.
+`children`|`(item: T, index?: number) => U`|The first argument contains an item of the same type as the single type of `each`. The second argument is `index`. Just return `JSX.Element` you want to iterate over.
+
+#### List.Filter
+It works the same as the `Array`'s `filter`.
+
+Props|Type|Description
+---|---|---
+`each`|`T[]`|The array you want to iterate over.
+`predicate`|`(item: T) => boolean`|A function that accepts up to one arguments. The filter method calls the predicate function one time for each element in the array.
+`children`|`(item: T, index?: number) => U`|The first argument contains an item of the same type as the single type of `each`. The second argument is `index`. Just return `JSX.Element` you want to iterate over.
+
 ## Example
 
 ### `Show`
@@ -70,4 +90,101 @@ const [role, setRole] = useState('user')
     <p>Admin Component</p>
   </Match>
 </Switch>
+```
+
+### `List.Map`
+
+```tsx
+const todos = [
+  {
+    userId: 1,
+    id: 1,
+    title: 'delectus aut autem',
+    completed: false,
+  },
+  {
+    userId: 1,
+    id: 2,
+    title: 'quis ut nam facilis et officia qui',
+    completed: false,
+  },
+  {
+    userId: 1,
+    id: 3,
+    title: 'fugiat veniam minus',
+    completed: false,
+  },
+  {
+    userId: 1,
+    id: 4,
+    title: 'et porro tempora',
+    completed: true,
+  },
+  {
+    userId: 1,
+    id: 5,
+    title: 'laboriosam mollitia et enim quasi adipisci quia provident illum',
+    completed: false,
+  },
+];
+
+<List.Map each={todos}>
+  {(todo => (
+    <li key={todo.id}>
+      <h2>{todo.title}</h2>
+    </li>
+  ))}
+</List.Map>
+```
+
+### `List.Filter`
+
+```tsx
+const todos = [
+  {
+    userId: 1,
+    id: 1,
+    title: 'delectus aut autem',
+    completed: false,
+  },
+  {
+    userId: 1,
+    id: 2,
+    title: 'quis ut nam facilis et officia qui',
+    completed: false,
+  },
+  {
+    userId: 1,
+    id: 3,
+    title: 'fugiat veniam minus',
+    completed: false,
+  },
+  {
+    userId: 1,
+    id: 4,
+    title: 'et porro tempora',
+    completed: true,
+  },
+  {
+    userId: 1,
+    id: 5,
+    title: 'laboriosam mollitia et enim quasi adipisci quia provident illum',
+    completed: false,
+  },
+];
+
+{/* Only Rendered when `completed=true` */}
+<List.Filter
+  each={todos}
+  predicate={todo => todo.completed}
+>
+  {(todo => (
+    <li key={todo.id}>
+      <h2>{todo.title}</h2>
+      <p>
+        {todo.completed ? 'Completed!!!' : 'Not Completed'}
+      </p>
+    </li>
+  ))}
+</List.Filter>
 ```
